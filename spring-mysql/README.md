@@ -8,10 +8,11 @@ two containers, which are available on Docker Hub:
 
 You can also choose to build the images from this repository:
 
+ ```
  cd spring-mysql-app
  docker build -t <app-name> .
 
  cd ../spring-mysql-db
  docker build -t <db-name> .
-
-Follow instructions on https://support.fortanix.com/hc/en-us/articles/360046217731-Using-Fortanix-Enclave-Manager-to-Build-an-Enclave-OS-Spring-Application to build and deploy the application using Fortanix Enclave Manager.
+```
+Follow instructions [here](https://support.fortanix.com/hc/en-us/articles/360046217731-Using-Fortanix-Enclave-Manager-to-Build-an-Enclave-OS-Spring-Application) to build and deploy the application using Fortanix Enclave Manager.

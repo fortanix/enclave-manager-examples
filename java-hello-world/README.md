@@ -2,4 +2,6 @@ The Hello World sample demonstrates a simple Java application running in AdoptOp
 
 Build the application image:
 
+```
 docker build -t <image-tag> .
+```

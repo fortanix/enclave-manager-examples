@@ -14,5 +14,8 @@ RUN cd /root && \
     cd complete && \
     ./mvnw clean package
 
+COPY application.properties /root/gs-accessing-data-mysql/complete/src/main/resources/application.properties
+COPY entrypoint.sh /root/entrypoint.sh
 # Keeping max heap size to 2GB, as it seems sufficient to run the tests
-CMD ["java", "-Xmx256m", "-Dspring.config.location=/root/gs-accessing-data-mysql/complete/src/main/resources/application.properties", "-jar", "/root/gs-accessing-data-mysql/complete/target/gs-mysql-data-0.1.0.jar"]
+#CMD ["java", "-Xmx256m", "-Dspring.coinfig.location=/root/gs-accessing-data-mysql/complete/src/main/resources/application.properties", "-jar", "/root/gs-accessing-data-mysql/complete/target/gs-mysql-data-0.1.0.jar"]
+ENTRYPOINT ["/root/entrypoint.sh"]
